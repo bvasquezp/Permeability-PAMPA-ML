@@ -1,0 +1,4 @@
+Dataset,Accuracy,Sensibilidad,Especificidad,AUC,MCC,F1-Score
+Training (Original),0.863,0.852,0.877,0.94,0.727,0.87
+Test Interno,0.751,0.76,0.742,0.83,0.501,0.766
+Validacion Externa,0.887,0.939,0.349,0.678,0.291,0.938
