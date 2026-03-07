@@ -55,6 +55,3 @@ Es necesario contar con un entorno de Python 3.x y las siguientes librerías:
 Bash
 
 pip install rdkit scikit-learn pandas matplotlib seaborn joblib shap
-Recomendaciones para el toque final:
-Insertar Imágenes: Donde el código dice [Image of...], te sugiero reemplazarlo con la sintaxis de imagen de Markdown apuntando a tus archivos locales, por ejemplo:
-![Curva ROC](results/figures/Curvas_ROC_Hibrido_PAMPA.png)
