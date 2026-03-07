@@ -58,6 +58,3 @@ pip install rdkit scikit-learn pandas matplotlib seaborn joblib shap
 Recomendaciones para el toque final:
 Insertar Imágenes: Donde el código dice [Image of...], te sugiero reemplazarlo con la sintaxis de imagen de Markdown apuntando a tus archivos locales, por ejemplo:
 ![Curva ROC](results/figures/Curvas_ROC_Hibrido_PAMPA.png)
-
-
-Licencia: Es buena práctica añadir un archivo de licencia (como MIT) si quieres que otros puedan citar tu código.
