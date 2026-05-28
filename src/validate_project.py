@@ -14,7 +14,7 @@ class FileCheck:
     path: Path
     rows: int | None
     columns: int | None
-    sha256: str
+    sha256: str | None
 
 
 CHECKS = [
@@ -58,7 +58,13 @@ CHECKS = [
         Path("results/screening/Pre_Cribado_5_Moleculas.csv"),
         5,
         13,
-        "3b5125795edef96fb2e37b94ce7378a89aa627cc0aa96e3876fae4f0cb48e7fb",
+        None,
+    ),
+    FileCheck(
+        Path("results/screening/Reporte_Lipinski_Candidatos.csv"),
+        5,
+        9,
+        None,
     ),
     FileCheck(
         Path("results/screening/DrugBank_Candidatos_Tesis.csv"),
@@ -90,9 +96,10 @@ def validate() -> None:
             failures.append(f"Missing file: {check.path}")
             continue
 
-        observed_hash = sha256(check.path)
-        if observed_hash != check.sha256:
-            failures.append(f"Hash mismatch: {check.path}")
+        if check.sha256 is not None:
+            observed_hash = sha256(check.path)
+            if observed_hash != check.sha256:
+                failures.append(f"Hash mismatch: {check.path}")
 
         if check.rows is not None and check.columns is not None:
             data = pd.read_csv(check.path)
@@ -101,6 +108,23 @@ def validate() -> None:
                     f"Shape mismatch: {check.path} expected "
                     f"{check.rows}x{check.columns}, observed {data.shape[0]}x{data.shape[1]}"
                 )
+
+    pre_screening = pd.read_csv("results/screening/Pre_Cribado_5_Moleculas.csv")
+    expected_ids = ["Molecule3", "Molecule2", "Molecule4", "Molecule1", "Molecule5"]
+    if pre_screening["ID_Molecula"].tolist() != expected_ids:
+        failures.append("Unexpected pre-screening candidate order")
+
+    expected_probabilities = [0.696, 0.695, 0.659, 0.648, 0.045]
+    observed_probabilities = pre_screening["Probabilidad_Permeable"].round(3).tolist()
+    if observed_probabilities != expected_probabilities:
+        failures.append(
+            "Unexpected pre-screening probabilities: "
+            f"expected {expected_probabilities}, observed {observed_probabilities}"
+        )
+
+    lipinski = pd.read_csv("results/screening/Reporte_Lipinski_Candidatos.csv")
+    if not lipinski["Aprobado_Lipinski"].eq("SI").all():
+        failures.append("Expected all pre-screening candidates to pass Lipinski filter")
 
     if failures:
         for failure in failures:

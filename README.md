@@ -53,6 +53,13 @@ repository version:
 python src/validate_project.py
 ```
 
+Recompute the final model metrics and compare them with the stored thesis
+results:
+
+```powershell
+python src/check_final_metrics.py
+```
+
 ## Final Model
 
 The selected thesis model is a `RandomForestClassifier` trained with 11 final
@@ -143,6 +150,13 @@ Compare classical classifiers on the 11 final descriptors:
 
 ```powershell
 python src/evaluate_models.py --dataset data/raw/training_11.csv --output results/metrics/model_comparison.csv
+```
+
+Check that the serialized Random Forest reproduces the final training, internal
+test and external validation metrics:
+
+```powershell
+python src/check_final_metrics.py
 ```
 
 Rebuild the `MoleculeN -> DrugBank_ID` translator from the SDF:
