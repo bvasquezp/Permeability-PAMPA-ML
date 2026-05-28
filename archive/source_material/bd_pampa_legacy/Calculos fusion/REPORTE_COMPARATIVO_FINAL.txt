@@ -1,0 +1,92 @@
+--- REPORTE COMPARATIVO (MODELO DE CONSENSO) ---
+Atributos de Consenso: 92
+
+
+==================
+  Modelo: SVM
+==================
+
+--- Resultados en: Prueba Interna ---
+  ROC AUC:          0.7522
+  BACC:             0.6748
+  Sensitivity:      0.8525
+  Specificity:      0.4970
+
+
+--- Resultados en: Prueba Externa ---
+  ROC AUC:          0.6034
+  BACC:             0.5344
+  Sensitivity:      0.9526
+  Specificity:      0.1163
+
+
+==================
+  Modelo: Random Forest
+==================
+
+--- Resultados en: Prueba Interna ---
+  ROC AUC:          0.8273
+  BACC:             0.7421
+  Sensitivity:      0.7959
+  Specificity:      0.6884
+
+
+--- Resultados en: Prueba Externa ---
+  ROC AUC:          0.6586
+  BACC:             0.6102
+  Sensitivity:      0.9413
+  Specificity:      0.2791
+
+
+==================
+  Modelo: Árbol de Decisión (J48)
+==================
+
+--- Resultados en: Prueba Interna ---
+  ROC AUC:          0.6793
+  BACC:             0.6780
+  Sensitivity:      0.6913
+  Specificity:      0.6647
+
+
+--- Resultados en: Prueba Externa ---
+  ROC AUC:          0.6151
+  BACC:             0.6165
+  Sensitivity:      0.9074
+  Specificity:      0.3256
+
+
+==================
+  Modelo: k-NN (k=5)
+==================
+
+--- Resultados en: Prueba Interna ---
+  ROC AUC:          0.7252
+  BACC:             0.6826
+  Sensitivity:      0.7616
+  Specificity:      0.6036
+
+
+--- Resultados en: Prueba Externa ---
+  ROC AUC:          0.5637
+  BACC:             0.5610
+  Sensitivity:      0.8894
+  Specificity:      0.2326
+
+
+==================
+  Modelo: Naive Bayes
+==================
+
+--- Resultados en: Prueba Interna ---
+  ROC AUC:          0.7722
+  BACC:             0.6587
+  Sensitivity:      0.8696
+  Specificity:      0.4477
+
+
+--- Resultados en: Prueba Externa ---
+  ROC AUC:          0.6746
+  BACC:             0.5108
+  Sensitivity:      0.9752
+  Specificity:      0.0465

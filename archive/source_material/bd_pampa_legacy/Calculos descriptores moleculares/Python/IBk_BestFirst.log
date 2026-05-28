@@ -1,0 +1,46 @@
+=== Run information ===
+Start time:    2025-08-10 21:05:56
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.BestFirst" -i "C:/Users/benja/Desktop/BD PAMPA/Bejamin 24 julio/training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 
+Search:        BestFirst
+Duration:      1 D : 14 H : 812 M : 48746.16 s
+Task:          3/6
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 12979
+	Merit of best subset found:    0.264
+
+Attribute Subset Evaluator (supervised, Class (nominal): 618 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.lazy.IBk
+	Scheme options: -K 1 -W 0 -A weka.core.neighboursearch.LinearNNSearch -A "weka.core.EuclideanDistance -R first-last"      
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 16,65,218,232,244,275,300,339,354,379,397,450,471,514,574,602,603 : 17
+                     totalcharge
+                     STN_L
+                     Eig12_EA(dm)
+                     nRCOOH
+                     nROH
+                     C-044
+                     SssssN+
+                     CATS2D_02_DD
+                     CATS2D_06_DP
+                     CATS2D_04_AN
+                     CATS2D_08_PL
+                     B04[N-Cl]
+                     B07[C-C]
+                     F02[N-S]
+                     F10[N-N]
+                     s1_phSize
+                     s2_phSize
+
+------------------------------------------------------------

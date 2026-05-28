@@ -1,0 +1,48 @@
+=== Run information ===
+Start time:    2025-08-18 14:22:55
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.BestFirst" -i "C:/Users/benja/Desktop/BD PAMPA/Calculos Fingerprint/new_training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 
+Search:        BestFirst
+Duration:      0 D : 8 H : 459 M : 27562.08 s
+Task:          6/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 3714
+	Merit of best subset found:    0.259
+
+Attribute Subset Evaluator (supervised, Class (nominal): 167 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.lazy.IBk
+	Scheme options: -K 1 -W 0 -A weka.core.neighboursearch.LinearNNSearch -A "weka.core.EuclideanDistance -R first-last"      
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 3,18,23,27,35,39,40,46,49,50,56,62,66,68,82,84,86,125,161 : 19
+                     MACCSFP3
+                     MACCSFP18
+                     MACCSFP23
+                     MACCSFP27
+                     MACCSFP35
+                     MACCSFP39
+                     MACCSFP40
+                     MACCSFP46
+                     MACCSFP49
+                     MACCSFP50
+                     MACCSFP56
+                     MACCSFP62
+                     MACCSFP66
+                     MACCSFP68
+                     MACCSFP82
+                     MACCSFP84
+                     MACCSFP86
+                     MACCSFP125
+                     MACCSFP161
+
+------------------------------------------------------------

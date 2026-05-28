@@ -1,0 +1,42 @@
+=== Run information ===
+Start time:    2025-08-18 14:33:05
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.LinearForwardSelection" -i "C:/Users/benja/Desktop/BD PAMPA/Calculos Fingerprint/new_training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 
+Search:        LinearForwardSelection
+Duration:      0 D : 1 H : 58 M : 3451.64 s
+Task:          8/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Linear Forward Selection.
+	Start set: no attributes
+	Forward selection method: forward selection
+	Stale search after 5 node expansions
+	Linear Forward Selection Type: fixed-set
+	Number of top-ranked attributes that are used: 50
+	Total number of subsets evaluated: 889
+	Merit of best subset found:    0.274
+
+Attribute Subset Evaluator (supervised, Class (nominal): 167 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.lazy.IBk
+	Scheme options: -K 1 -W 0 -A weka.core.neighboursearch.LinearNNSearch -A "weka.core.EuclideanDistance -R first-last"      
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 49,62,66,82,84,101,121,125,145,158,161 : 11
+                     MACCSFP49
+                     MACCSFP62
+                     MACCSFP66
+                     MACCSFP82
+                     MACCSFP84
+                     MACCSFP101
+                     MACCSFP121
+                     MACCSFP125
+                     MACCSFP145
+                     MACCSFP158
+                     MACCSFP161
+
+------------------------------------------------------------

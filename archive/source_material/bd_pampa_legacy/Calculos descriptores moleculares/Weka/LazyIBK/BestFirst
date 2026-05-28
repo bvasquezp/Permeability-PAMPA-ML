@@ -1,0 +1,33 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.ClassifierSubsetEval -B weka.classifiers.lazy.IBk -T -H "Click to set hold out or test instances" -- -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Search:       weka.attributeSelection.BestFirst -D 1 -N 5
+Relation:     training
+Instances:    4357
+Attributes:   618
+              [list of attributes omitted]
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 4308
+	Merit of best subset found:    0.014
+
+Attribute Subset Evaluator (supervised, Class (nominal): 618 Actividad):
+	Classifier Subset Evaluator
+	Learning scheme: weka.classifiers.lazy.IBk
+	Scheme options: -K 1 -W 0 -A weka.core.neighboursearch.LinearNNSearch -A "weka.core.EuclideanDistance -R first-last"      
+	Hold out/test set: Training data
+	Accuracy estimation: classification error
+
+Selected attributes: 53,90 : 2
+                     IC1
+                     ATSC5m
+

@@ -1,0 +1,38 @@
+=== Run information ===
+Start time:    2025-08-10 18:03:22
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.BestFirst" -i "C:/Users/benja/Desktop/BD PAMPA/Bejamin 24 julio/training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 
+Search:        BestFirst
+Duration:      0 D : 2 H : 149 M : 8946.04 s
+Task:          1/1
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 8552
+	Merit of best subset found:    0.234
+
+Attribute Subset Evaluator (supervised, Class (nominal): 618 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.trees.J48
+	Scheme options: -C 0.25 -M 2           
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 10,157,232,253,270,402,456,473,579 : 9
+                     nX
+                     P_VSA_MR_2
+                     nRCOOH
+                     nImidazoles
+                     C-034
+                     CATS2D_03_NL
+                     B05[N-O]
+                     B07[C-O]
+                     LOGPcons
+
+------------------------------------------------------------

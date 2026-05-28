@@ -1,0 +1,230 @@
+=== Run information ===
+Start time:    2025-08-18 14:22:55
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.RankSearch" -i "C:/Users/benja/Desktop/BD PAMPA/Calculos Fingerprint/new_training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 
+Search:        RankSearch
+Duration:      0 D : 1 H : 39 M : 2336.62 s
+Task:          4/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	RankSearch :
+	Attribute evaluator : weka.attributeSelection.GainRatioAttributeEval  
+	Attribute ranking : 
+	  18 MACCSFP18
+	 125 MACCSFP125
+	  31 MACCSFP31
+	 145 MACCSFP145
+	   8 MACCSFP8
+	  65 MACCSFP65
+	  62 MACCSFP62
+	   3 MACCSFP3
+	 163 MACCSFP163
+	  11 MACCSFP11
+	  54 MACCSFP54
+	 165 MACCSFP165
+	 139 MACCSFP139
+	  49 MACCSFP49
+	  48 MACCSFP48
+	 162 MACCSFP162
+	 121 MACCSFP121
+	  89 MACCSFP89
+	  29 MACCSFP29
+	  68 MACCSFP68
+	 131 MACCSFP131
+	  44 MACCSFP44
+	  24 MACCSFP24
+	 123 MACCSFP123
+	 135 MACCSFP135
+	 137 MACCSFP137
+	  84 MACCSFP84
+	  13 MACCSFP13
+	 140 MACCSFP140
+	  80 MACCSFP80
+	 120 MACCSFP120
+	 144 MACCSFP144
+	  77 MACCSFP77
+	  38 MACCSFP38
+	 142 MACCSFP142
+	  83 MACCSFP83
+	  96 MACCSFP96
+	  43 MACCSFP43
+	  42 MACCSFP42
+	 156 MACCSFP156
+	 161 MACCSFP161
+	  39 MACCSFP39
+	 146 MACCSFP146
+	  98 MACCSFP98
+	 133 MACCSFP133
+	 157 MACCSFP157
+	 104 MACCSFP104
+	  75 MACCSFP75
+	  72 MACCSFP72
+	  53 MACCSFP53
+	  81 MACCSFP81
+	 107 MACCSFP107
+	 158 MACCSFP158
+	 159 MACCSFP159
+	 164 MACCSFP164
+	 143 MACCSFP143
+	  87 MACCSFP87
+	 134 MACCSFP134
+	 136 MACCSFP136
+	  52 MACCSFP52
+	 101 MACCSFP101
+	  45 MACCSFP45
+	  94 MACCSFP94
+	  95 MACCSFP95
+	  36 MACCSFP36
+	  47 MACCSFP47
+	 132 MACCSFP132
+	  46 MACCSFP46
+	  64 MACCSFP64
+	 100 MACCSFP100
+	  86 MACCSFP86
+	  59 MACCSFP59
+	  88 MACCSFP88
+	 122 MACCSFP122
+	 148 MACCSFP148
+	  82 MACCSFP82
+	 118 MACCSFP118
+	 147 MACCSFP147
+	  99 MACCSFP99
+	 105 MACCSFP105
+	  66 MACCSFP66
+	 155 MACCSFP155
+	 127 MACCSFP127
+	  79 MACCSFP79
+	  32 MACCSFP32
+	 116 MACCSFP116
+	  90 MACCSFP90
+	 111 MACCSFP111
+	 128 MACCSFP128
+	 129 MACCSFP129
+	 160 MACCSFP160
+	  76 MACCSFP76
+	  33 MACCSFP33
+	  92 MACCSFP92
+	 110 MACCSFP110
+	 124 MACCSFP124
+	 106 MACCSFP106
+	  73 MACCSFP73
+	 115 MACCSFP115
+	 117 MACCSFP117
+	  51 MACCSFP51
+	  74 MACCSFP74
+	  91 MACCSFP91
+	  85 MACCSFP85
+	  60 MACCSFP60
+	 138 MACCSFP138
+	 113 MACCSFP113
+	  93 MACCSFP93
+	 150 MACCSFP150
+	   2 MACCSFP2
+	  30 MACCSFP30
+	  14 MACCSFP14
+	 166 MACCSFP166
+	  15 MACCSFP15
+	  28 MACCSFP28
+	  12 MACCSFP12
+	   9 MACCSFP9
+	   1 MACCSFP1
+	  10 MACCSFP10
+	   7 MACCSFP7
+	   6 MACCSFP6
+	  23 MACCSFP23
+	  19 MACCSFP19
+	   4 MACCSFP4
+	  20 MACCSFP20
+	  22 MACCSFP22
+	  21 MACCSFP21
+	  27 MACCSFP27
+	  16 MACCSFP16
+	  17 MACCSFP17
+	   5 MACCSFP5
+	  26 MACCSFP26
+	  25 MACCSFP25
+	 141 MACCSFP141
+	  78 MACCSFP78
+	 102 MACCSFP102
+	  97 MACCSFP97
+	  69 MACCSFP69
+	  67 MACCSFP67
+	  71 MACCSFP71
+	  70 MACCSFP70
+	 119 MACCSFP119
+	 114 MACCSFP114
+	 130 MACCSFP130
+	 126 MACCSFP126
+	 108 MACCSFP108
+	 103 MACCSFP103
+	 112 MACCSFP112
+	 109 MACCSFP109
+	 154 MACCSFP154
+	  41 MACCSFP41
+	 152 MACCSFP152
+	 153 MACCSFP153
+	  35 MACCSFP35
+	  34 MACCSFP34
+	  40 MACCSFP40
+	  37 MACCSFP37
+	  61 MACCSFP61
+	  58 MACCSFP58
+	 149 MACCSFP149
+	  63 MACCSFP63
+	 151 MACCSFP151
+	  50 MACCSFP50
+	  57 MACCSFP57
+	  55 MACCSFP55
+	  56 MACCSFP56
+	Merit of best subset found : 0.281
+
+Attribute Subset Evaluator (supervised, Class (nominal): 167 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.trees.J48
+	Scheme options: -C 0.25 -M 2           
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 3,8,11,13,18,24,29,31,38,44,48,49,54,62,65,68,77,80,83,84,89,96,120,121,123,125,131,135,137,139,140,142,144,145,162,163,165 : 37
+                     MACCSFP3
+                     MACCSFP8
+                     MACCSFP11
+                     MACCSFP13
+                     MACCSFP18
+                     MACCSFP24
+                     MACCSFP29
+                     MACCSFP31
+                     MACCSFP38
+                     MACCSFP44
+                     MACCSFP48
+                     MACCSFP49
+                     MACCSFP54
+                     MACCSFP62
+                     MACCSFP65
+                     MACCSFP68
+                     MACCSFP77
+                     MACCSFP80
+                     MACCSFP83
+                     MACCSFP84
+                     MACCSFP89
+                     MACCSFP96
+                     MACCSFP120
+                     MACCSFP121
+                     MACCSFP123
+                     MACCSFP125
+                     MACCSFP131
+                     MACCSFP135
+                     MACCSFP137
+                     MACCSFP139
+                     MACCSFP140
+                     MACCSFP142
+                     MACCSFP144
+                     MACCSFP145
+                     MACCSFP162
+                     MACCSFP163
+                     MACCSFP165
+
+------------------------------------------------------------

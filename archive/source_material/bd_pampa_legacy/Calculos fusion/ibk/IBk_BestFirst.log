@@ -1,0 +1,69 @@
+=== Run information ===
+Start time:    2025-09-30 15:14:37
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.BestFirst" -i "C:\Users\benja\Desktop\BD PAMPA\Calculos fusion\combined training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 
+Search:        BestFirst
+Duration:      0 D : 0 H : 0 M : 0.38 s
+Task:          6/10
+No search method given.
+------------------------------------------------------------
+=== Run information ===
+Start time:    2025-09-30 15:18:35
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.BestFirst" -i "C:\Users\benja\Desktop\BD PAMPA\Calculos fusion\combined_training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 
+Search:        BestFirst
+Duration:      0 D : 0 H : 0 M : 1.03 s
+Task:          6/10
+------------------------------------------------------------
+=== Run information ===
+Start time:    2025-09-30 15:31:50
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.BestFirst" -i "C:\Users\benja\Desktop\BD PAMPA\Calculos fusion\combined_training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 
+Search:        BestFirst
+Duration:      0 D : 0 H : 0 M : 1.09 s
+Task:          6/10
+------------------------------------------------------------
+=== Run information ===
+Start time:    2025-09-30 15:43:47
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.BestFirst" -i "C:\Users\benja\Desktop\BD PAMPA\Calculos fusion\combined_training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 
+Search:        BestFirst
+Duration:      1 D : 15 H : 906 M : 54350.71 s
+Task:          6/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 15476
+	Merit of best subset found:    0.263
+
+Attribute Subset Evaluator (supervised, Class (nominal): 784 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.lazy.IBk
+	Scheme options: -K 1 -W 0 -A weka.core.neighboursearch.LinearNNSearch -A "weka.core.EuclideanDistance -R first-last"      
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 16,65,244,354,397,514,574,602,603,618,626,633,637,646,648 : 15
+                     totalcharge
+                     STN_L
+                     nROH
+                     CATS2D_06_DP
+                     CATS2D_08_PL
+                     F02[N-S]
+                     F10[N-N]
+                     s1_phSize
+                     s2_phSize
+                     MACCSFP1
+                     MACCSFP9
+                     MACCSFP16
+                     MACCSFP20
+                     MACCSFP29
+                     MACCSFP31
+
+------------------------------------------------------------

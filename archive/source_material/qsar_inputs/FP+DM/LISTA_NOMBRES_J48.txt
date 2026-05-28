@@ -1,0 +1,22 @@
+# Esta es la lista de atributos para J48. Copia y pega esto en la Celda 2 de tu notebook:
+LISTA_ATRIBUTOS_J48 = [
+    'B06[C-N]',
+    'B07[C-C]',
+    'B07[N-O]',
+    'Eig12_AEA(dm)',
+    'F04[C-C]',
+    'GATS5i',
+    'MACCSFP121',
+    'MACCSFP125',
+    'MACCSFP131',
+    'MACCSFP153',
+    'MACCSFP158',
+    'MACCSFP159',
+    'MACCSFP161',
+    'MACCSFP163',
+    'MACCSFP22',
+    'MACCSFP42',
+    'SaaCH',
+    'SsssCH',
+    'piPC05',
+]

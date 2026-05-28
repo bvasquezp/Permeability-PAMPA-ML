@@ -1,0 +1,22 @@
+============================================================
+--- REPORTE FINAL DEL MODELO DE CONSENSO ---
+============================================================
+
+Resultados en: Prueba Interna (Test Set)
+----------------------------------------
+  Accuracy:         0.7367
+  ROC AUC:          0.8068
+  BACC:             0.7337
+  Sensitivity:      0.7770
+  Specificity:      0.6903
+  Kappa:            0.4690
+
+Resultados en: Prueba Externa (External Set)
+----------------------------------------
+  Accuracy:         0.8663
+  ROC AUC:          0.6235
+  BACC:             0.6012
+  Sensitivity:      0.9233
+  Specificity:      0.2791
+  Kappa:            0.1961
+

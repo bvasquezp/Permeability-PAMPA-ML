@@ -2,3 +2,9 @@
 __pycache__/
 .ipynb_checkpoints/
 *.log
+!archive/source_material/**/*.log
+
+# Large local DrugBank exports kept for provenance but not suitable for normal GitHub.
+# Recreate or request these from the original DrugBank/Mordred workflow if needed.
+archive/source_material/qsar_inputs/Drugbank.txt
+archive/source_material/qsar_inputs/drugbank.xlsx

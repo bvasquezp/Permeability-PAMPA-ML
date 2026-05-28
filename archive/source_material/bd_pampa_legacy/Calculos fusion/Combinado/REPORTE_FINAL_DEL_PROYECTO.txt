@@ -1,0 +1,24 @@
+--- REPORTE DE VALIDACIÓN FINAL DEL PROYECTO ---
+Modelo: Random Forest
+Atributos de Consenso: 22
+
+--- Hiperparámetros Óptimos Encontrados ---
+{'max_depth': 10, 'max_features': 'sqrt', 'min_samples_split': 2, 'n_estimators': 300}
+
+--- Resultados en: Prueba Interna (Test Set) ---
+----------------------------------------
+  Accuracy:         0.7358
+  ROC AUC:          0.8064
+  BACC:             0.7301
+  Sensitivity:      0.8113
+  Specificity:      0.6489
+  Kappa:            0.4643
+
+--- Resultados en: Prueba Externa (External Set) ---
+----------------------------------------
+  Accuracy:         0.8889
+  ROC AUC:          0.6144
+  BACC:             0.5296
+  Sensitivity:      0.9661
+  Specificity:      0.0930
+  Kappa:            0.0791

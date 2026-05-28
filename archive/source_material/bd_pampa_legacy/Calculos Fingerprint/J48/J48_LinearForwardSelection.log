@@ -1,0 +1,82 @@
+=== Run information ===
+Start time:    2025-08-10 15:35:40
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.LinearForwardSelection" -i "C:/Users/benja/Desktop/BD PAMPA/Bejamin 24 julio/training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 
+Search:        LinearForwardSelection
+Duration:      0 D : 0 H : 6 M : 367.79 s
+Task:          3/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Linear Forward Selection.
+	Start set: no attributes
+	Forward selection method: forward selection
+	Stale search after 5 node expansions
+	Linear Forward Selection Type: fixed-set
+	Number of top-ranked attributes that are used: 50
+	Total number of subsets evaluated: 1118
+	Merit of best subset found:    0.252
+
+Attribute Subset Evaluator (supervised, Class (nominal): 618 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.trees.J48
+	Scheme options: -C 0.25 -M 2           
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 37,38,48,225,294,423,579 : 7
+                     Psi_e_A
+                     Psi_e_0
+                     PCR
+                     Eig15_AEA(dm)
+                     SaaCH
+                     SHED_LL
+                     LOGPcons
+
+------------------------------------------------------------
+=== Run information ===
+Start time:    2025-08-18 14:22:55
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.LinearForwardSelection" -i "C:/Users/benja/Desktop/BD PAMPA/Calculos Fingerprint/new_training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 
+Search:        LinearForwardSelection
+Duration:      0 D : 0 H : 10 M : 609.92 s
+Task:          3/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Linear Forward Selection.
+	Start set: no attributes
+	Forward selection method: forward selection
+	Stale search after 5 node expansions
+	Linear Forward Selection Type: fixed-set
+	Number of top-ranked attributes that are used: 50
+	Total number of subsets evaluated: 881
+	Merit of best subset found:    0.263
+
+Attribute Subset Evaluator (supervised, Class (nominal): 167 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.trees.J48
+	Scheme options: -C 0.25 -M 2           
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 49,62,66,82,84,101,121,125,140,143,144,145,161 : 13
+                     MACCSFP49
+                     MACCSFP62
+                     MACCSFP66
+                     MACCSFP82
+                     MACCSFP84
+                     MACCSFP101
+                     MACCSFP121
+                     MACCSFP125
+                     MACCSFP140
+                     MACCSFP143
+                     MACCSFP144
+                     MACCSFP145
+                     MACCSFP161
+
+------------------------------------------------------------

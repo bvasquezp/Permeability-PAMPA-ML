@@ -1,0 +1,69 @@
+=== Run information ===
+Start time:    2025-10-03 17:49:40
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.SubsetSizeForwardSelection" -i "C:\Users\benja\Desktop\BD PAMPA\Calculos fusion\combined_training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 
+Search:        SubsetSizeForwardSelection
+Duration:      0 D : 0 H : 2 M : 92.44 s
+Task:          5/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Subset Size Forward Selection.
+	Linear Forward Selection Type: fixed-set
+	Number of top-ranked attributes that are used: 50
+	Number of cross validation folds for subset size determination: 5
+	Seed for cross validation subset size determination: 1
+	Total number of subsets evaluated: 977
+	Merit of best subset found:    0.255
+
+Attribute Subset Evaluator (supervised, Class (nominal): 784 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.trees.J48
+	Scheme options: -C 0.25 -M 2           
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 37,48,579 : 3
+                     Psi_e_A
+                     PCR
+                     LOGPcons
+
+------------------------------------------------------------
+=== Run information ===
+Start time:    2025-10-06 19:01:14
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.SubsetSizeForwardSelection" -i "C:\Users\benja\Desktop\BD PAMPA\Calculos BD reducida\consenso_train.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 
+Search:        SubsetSizeForwardSelection
+Duration:      0 D : 0 H : 3 M : 184.38 s
+Task:          5/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Subset Size Forward Selection.
+	Linear Forward Selection Type: fixed-set
+	Number of top-ranked attributes that are used: 50
+	Number of cross validation folds for subset size determination: 5
+	Seed for cross validation subset size determination: 1
+	Total number of subsets evaluated: 400
+	Merit of best subset found:    0.267
+
+Attribute Subset Evaluator (supervised, Class (nominal): 72 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.trees.J48
+	Scheme options: -C 0.25 -M 2           
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 9,38,43,55,64,71 : 6
+                     D/Dtr05
+                     P_VSA_MR_5
+                     P_VSA_ppp_D
+                     STN_L
+                     nIR
+                     totalcharge
+
+------------------------------------------------------------

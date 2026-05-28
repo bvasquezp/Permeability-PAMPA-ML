@@ -1,0 +1,136 @@
+=== Run information ===
+Start time:    2025-10-06 19:10:32
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.RankSearch" -i "C:\Users\benja\Desktop\BD PAMPA\Calculos BD reducida\consenso_train.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 
+Search:        RankSearch
+Duration:      0 D : 0 H : 10 M : 625.83 s
+Task:          9/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	RankSearch :
+	Attribute evaluator : weka.attributeSelection.GainRatioAttributeEval  
+	Attribute ranking : 
+	 22 GATS8m
+	 46 Psi_e_A
+	 57 SpMax2_Bh(i)
+	 71 totalcharge
+	 50 SIC0
+	 18 GATS5i
+	 37 PCR
+	 49 SHED_LL
+	 33 MATS8m
+	 21 GATS7p
+	 32 MATS7m
+	 61 Vindex
+	 63 Yindex
+	 42 P_VSA_p_3
+	 69 piPC05
+	 58 SpMax4_Bh(m)
+	 55 STN_L
+	 41 P_VSA_i_2
+	 45 Psi_e_0
+	  6 C2SP2
+	 35 MW
+	 14 GATS2i
+	 38 P_VSA_MR_5
+	 59 SpMaxA_B(m)
+	 43 P_VSA_ppp_D
+	 60 SpPosA_L
+	 66 nR06
+	 25 IC2
+	 28 MATS1m
+	 23 GGI5
+	  9 D/Dtr05
+	 12 DECC
+	 56 SpMax1_Bh(i)
+	 54 SM6_B(m)
+	 10 D/Dtr09
+	 16 GATS2p
+	 36 Mp
+	 19 GATS5m
+	 27 LOC
+	  2 ATSC4m
+	 34 MAXDN
+	  1 AAC
+	 64 nIR
+	 47 RCI
+	 20 GATS6m
+	 48 RFD
+	  3 BIC3
+	 26 JGI1
+	 29 MATS3m
+	 51 SM1_Dz(p)
+	 40 P_VSA_e_3
+	 13 DELS
+	 62 WiA_D/Dt
+	 65 nR05
+	 53 SM5_X
+	 15 GATS2m
+	 39 P_VSA_MR_8
+	 70 stdMW
+	 31 MATS5p
+	  8 CIC5
+	 24 H_percent
+	 44 P_VSA_s_1
+	 17 GATS3p
+	  4 C1SP2
+	 30 MATS5i
+	  7 C2SP3
+	 68 nR10
+	 11 D/Dtr11
+	 52 SM3_X
+	  5 C1SP3
+	 67 nR07
+	Merit of best subset found : 0.311
+
+Attribute Subset Evaluator (supervised, Class (nominal): 72 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.lazy.IBk
+	Scheme options: -K 1 -W 0 -A weka.core.neighboursearch.LinearNNSearch -A "weka.core.EuclideanDistance -R first-last"      
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 6,9,10,12,14,16,18,19,21,22,23,25,28,32,33,35,36,37,38,41,42,43,45,46,49,50,54,55,56,57,58,59,60,61,63,66,69,71 : 38
+                     C2SP2
+                     D/Dtr05
+                     D/Dtr09
+                     DECC
+                     GATS2i
+                     GATS2p
+                     GATS5i
+                     GATS5m
+                     GATS7p
+                     GATS8m
+                     GGI5
+                     IC2
+                     MATS1m
+                     MATS7m
+                     MATS8m
+                     MW
+                     Mp
+                     PCR
+                     P_VSA_MR_5
+                     P_VSA_i_2
+                     P_VSA_p_3
+                     P_VSA_ppp_D
+                     Psi_e_0
+                     Psi_e_A
+                     SHED_LL
+                     SIC0
+                     SM6_B(m)
+                     STN_L
+                     SpMax1_Bh(i)
+                     SpMax2_Bh(i)
+                     SpMax4_Bh(m)
+                     SpMaxA_B(m)
+                     SpPosA_L
+                     Vindex
+                     Yindex
+                     nR06
+                     piPC05
+                     totalcharge
+
+------------------------------------------------------------

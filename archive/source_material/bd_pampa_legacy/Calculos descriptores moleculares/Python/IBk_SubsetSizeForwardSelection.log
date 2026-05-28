@@ -1,0 +1,34 @@
+=== Run information ===
+Start time:    2025-08-10 21:05:56
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.SubsetSizeForwardSelection" -i "C:/Users/benja/Desktop/BD PAMPA/Bejamin 24 julio/training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 
+Search:        SubsetSizeForwardSelection
+Duration:      0 D : 1 H : 38 M : 2273.82 s
+Task:          6/6
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Subset Size Forward Selection.
+	Linear Forward Selection Type: fixed-set
+	Number of top-ranked attributes that are used: 50
+	Number of cross validation folds for subset size determination: 5
+	Seed for cross validation subset size determination: 1
+	Total number of subsets evaluated: 857
+	Merit of best subset found:    0.297
+
+Attribute Subset Evaluator (supervised, Class (nominal): 618 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.lazy.IBk
+	Scheme options: -K 1 -W 0 -A weka.core.neighboursearch.LinearNNSearch -A "weka.core.EuclideanDistance -R first-last"      
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 65,168,489,594 : 4
+                     STN_L
+                     P_VSA_ppp_D
+                     B09[C-C]
+                     phLevel2
+
+------------------------------------------------------------

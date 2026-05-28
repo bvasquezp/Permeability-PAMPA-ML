@@ -1,0 +1,55 @@
+--- RESULTADOS DEL MODELO HÍBRIDO DEFINITIVO (Consenso J48+IBk) ---
+
+Modelo: SVM
+----------------------------------------
+  Accuracy:         0.6534
+  ROC AUC:          0.7192
+  BACC:             0.6398
+  Sensitivity:      0.8328
+  Specificity:      0.4469
+  Kappa:            0.2864
+
+Modelo: Random Forest
+----------------------------------------
+  Accuracy:         0.7202
+  ROC AUC:          0.7935
+  BACC:             0.7172
+  Sensitivity:      0.7594
+  Specificity:      0.6750
+  Kappa:            0.4358
+
+Modelo: Árbol de Decisión (J48)
+----------------------------------------
+  Accuracy:         0.6553
+  ROC AUC:          0.6553
+  BACC:             0.6544
+  Sensitivity:      0.6668
+  Specificity:      0.6668
+  Kappa:            0.3082
+
+Modelo: k-NN
+----------------------------------------
+  Accuracy:         0.6585
+  ROC AUC:          0.6919
+  BACC:             0.6538
+  Sensitivity:      0.7195
+  Specificity:      0.5881
+  Kappa:            0.3095
+
+Modelo: Regresión Logística
+----------------------------------------
+  Accuracy:         0.7131
+  ROC AUC:          0.7672
+  BACC:             0.7072
+  Sensitivity:      0.7903
+  Specificity:      0.6242
+  Kappa:            0.4181
+
+Modelo: Naive Bayes
+----------------------------------------
+  Accuracy:         0.6257
+  ROC AUC:          0.7117
+  BACC:             0.6070
+  Sensitivity:      0.8722
+  Specificity:      0.3417
+  Kappa:            0.2213

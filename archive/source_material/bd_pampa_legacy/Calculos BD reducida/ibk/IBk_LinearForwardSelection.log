@@ -1,0 +1,71 @@
+=== Run information ===
+Start time:    2025-10-03 17:55:54
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.LinearForwardSelection" -i "C:\Users\benja\Desktop\BD PAMPA\Calculos fusion\combined_training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 
+Search:        LinearForwardSelection
+Duration:      0 D : 1 H : 49 M : 2961.22 s
+Task:          8/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Linear Forward Selection.
+	Start set: no attributes
+	Forward selection method: forward selection
+	Stale search after 5 node expansions
+	Linear Forward Selection Type: fixed-set
+	Number of top-ranked attributes that are used: 50
+	Total number of subsets evaluated: 1200
+	Merit of best subset found:    0.297
+
+Attribute Subset Evaluator (supervised, Class (nominal): 784 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.lazy.IBk
+	Scheme options: -K 1 -W 0 -A weka.core.neighboursearch.LinearNNSearch -A "weka.core.EuclideanDistance -R first-last"      
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 65,168,489,594 : 4
+                     STN_L
+                     P_VSA_ppp_D
+                     B09[C-C]
+                     phLevel2
+
+------------------------------------------------------------
+=== Run information ===
+Start time:    2025-10-06 19:04:18
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.LinearForwardSelection" -i "C:\Users\benja\Desktop\BD PAMPA\Calculos BD reducida\consenso_train.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.lazy.IBk" -F 5 -T 0.01 -R 1 
+Search:        LinearForwardSelection
+Duration:      0 D : 0 H : 22 M : 1331.90 s
+Task:          8/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Linear Forward Selection.
+	Start set: no attributes
+	Forward selection method: forward selection
+	Stale search after 5 node expansions
+	Linear Forward Selection Type: fixed-set
+	Number of top-ranked attributes that are used: 50
+	Total number of subsets evaluated: 535
+	Merit of best subset found:    0.283
+
+Attribute Subset Evaluator (supervised, Class (nominal): 72 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.lazy.IBk
+	Scheme options: -K 1 -W 0 -A weka.core.neighboursearch.LinearNNSearch -A "weka.core.EuclideanDistance -R first-last"      
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 43,48,55,64,71 : 5
+                     P_VSA_ppp_D
+                     RFD
+                     STN_L
+                     nIR
+                     totalcharge
+
+------------------------------------------------------------

@@ -1,0 +1,55 @@
+--- RESULTADOS DETALLADOS DEL MODELO HÍBRIDO (Promedio de 10-fold CV) ---
+
+Modelo: SVM
+----------------------------------------
+  Accuracy:         0.6734
+  ROC AUC:          0.7429
+  BACC:             0.6678
+  Sensitivity:      0.7479
+  Specificity:      0.5877
+  Kappa:            0.3382
+
+Modelo: Random Forest
+----------------------------------------
+  Accuracy:         0.6824
+  ROC AUC:          0.7337
+  BACC:             0.6803
+  Sensitivity:      0.7101
+  Specificity:      0.6504
+  Kappa:            0.3609
+
+Modelo: Árbol de Decisión (J48)
+----------------------------------------
+  Accuracy:         0.6234
+  ROC AUC:          0.6229
+  BACC:             0.6223
+  Sensitivity:      0.6376
+  Specificity:      0.6069
+  Kappa:            0.2442
+
+Modelo: k-NN
+----------------------------------------
+  Accuracy:         0.6780
+  ROC AUC:          0.7179
+  BACC:             0.6744
+  Sensitivity:      0.7256
+  Specificity:      0.6232
+  Kappa:            0.3501
+
+Modelo: Regresión Logística
+----------------------------------------
+  Accuracy:         0.6743
+  ROC AUC:          0.7411
+  BACC:             0.6659
+  Sensitivity:      0.7852
+  Specificity:      0.5467
+  Kappa:            0.3363
+
+Modelo: Naive Bayes
+----------------------------------------
+  Accuracy:         0.6208
+  ROC AUC:          0.7450
+  BACC:             0.5953
+  Sensitivity:      0.9571
+  Specificity:      0.2336
+  Kappa:            0.2000

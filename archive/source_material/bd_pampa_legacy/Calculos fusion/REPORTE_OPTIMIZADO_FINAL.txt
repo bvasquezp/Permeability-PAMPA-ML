@@ -1,0 +1,19 @@
+--- REPORTE FINAL DEL MODELO DE CONSENSO OPTIMIZADO ---
+Modelo Campeón: Random Forest
+
+--- Hiperparámetros Óptimos ---
+{'max_depth': 10, 'max_features': 'log2', 'n_estimators': 200}
+
+
+--- Resultados en: Prueba Interna ---
+  ROC AUC:          0.8369
+  BACC:             0.7402
+  Sensitivity:      0.8473
+  Specificity:      0.6331
+
+
+--- Resultados en: Prueba Externa ---
+  ROC AUC:          0.6337
+  BACC:             0.5735
+  Sensitivity:      0.9842
+  Specificity:      0.1628

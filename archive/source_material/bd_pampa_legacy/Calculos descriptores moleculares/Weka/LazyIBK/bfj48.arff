@@ -1,0 +1,10 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.trees.J48 -F 5 -T 0.01 -R 1 -- -C 0.25 -M 2
+Search:       weka.attributeSelection.BestFirst -D 1 -N 5
+Relation:     training
+Instances:    4357
+Attributes:   618
+              [list of attributes omitted]
+Evaluation mode:    evaluate on all training data
+

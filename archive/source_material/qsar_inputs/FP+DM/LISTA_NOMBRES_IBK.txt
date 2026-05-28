@@ -1,0 +1,17 @@
+# Esta es la lista de atributos para IBk. Copia y pega esto en la Celda 2 de tu notebook:
+LISTA_ATRIBUTOS_IBK = [
+    'B06[C-N]',
+    'B07[C-C]',
+    'B07[N-O]',
+    'Eig12_AEA(dm)',
+    'F04[C-C]',
+    'MACCSFP102',
+    'MACCSFP125',
+    'MACCSFP131',
+    'MACCSFP153',
+    'MACCSFP158',
+    'MACCSFP161',
+    'MACCSFP164',
+    'MACCSFP22',
+    'MACCSFP88',
+]

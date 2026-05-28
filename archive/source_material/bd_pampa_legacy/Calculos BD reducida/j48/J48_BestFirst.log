@@ -1,0 +1,74 @@
+=== Run information ===
+Start time:    2025-10-03 17:49:40
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.BestFirst" -i "C:\Users\benja\Desktop\BD PAMPA\Calculos fusion\combined_training.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 
+Search:        BestFirst
+Duration:      0 D : 3 H : 163 M : 9775.37 s
+Task:          1/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 11646
+	Merit of best subset found:    0.24 
+
+Attribute Subset Evaluator (supervised, Class (nominal): 784 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.trees.J48
+	Scheme options: -C 0.25 -M 2           
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 184,219,293,300,342,367,380,462,579,682 : 10
+                     Eta_beta_A
+                     Eig13_EA(dm)
+                     SssCH2
+                     SssssN+
+                     CATS2D_05_DD
+                     CATS2D_06_AA
+                     CATS2D_05_AN
+                     B06[C-C]
+                     LOGPcons
+                     MACCSFP65
+
+------------------------------------------------------------
+=== Run information ===
+Start time:    2025-10-06 19:01:14
+Commandline:   java -cp "D:/Weka-3-6/weka.jar" weka.attributeSelection.WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 -s "weka.attributeSelection.BestFirst" -i "C:\Users\benja\Desktop\BD PAMPA\Calculos BD reducida\consenso_train.arff"
+Evaluator:     WrapperSubsetEval -B "weka.classifiers.trees.J48" -F 5 -T 0.01 -R 1 
+Search:        BestFirst
+Duration:      0 D : 0 H : 11 M : 654.58 s
+Task:          1/10
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 732
+	Merit of best subset found:    0.264
+
+Attribute Subset Evaluator (supervised, Class (nominal): 72 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.trees.J48
+	Scheme options: -C 0.25 -M 2           
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 6,15,43,55,68,71 : 6
+                     C2SP2
+                     GATS2m
+                     P_VSA_ppp_D
+                     STN_L
+                     nR10
+                     totalcharge
+
+------------------------------------------------------------

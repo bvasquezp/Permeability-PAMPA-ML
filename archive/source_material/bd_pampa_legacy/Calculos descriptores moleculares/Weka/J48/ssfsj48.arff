@@ -1,0 +1,35 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.trees.J48 -F 5 -T 0.01 -R 1 -- -C 0.25 -M 2
+Search:       weka.attributeSelection.SubsetSizeForwardSelection -I -K 50 -T 0 -F 5 -S 1 -Z false -E weka.attributeSelection.ClassifierSubsetEval -- -B weka.classifiers.rules.ZeroR -T -H "Click to set hold out or test instances"
+Relation:     training
+Instances:    4357
+Attributes:   618
+              [list of attributes omitted]
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Subset Size Forward Selection.
+	Linear Forward Selection Type: fixed-set
+	Number of top-ranked attributes that are used: 50
+	Number of cross validation folds for subset size determination: 5
+	Seed for cross validation subset size determination: 1
+	Total number of subsets evaluated: 811
+	Merit of best subset found:    0.255
+
+Attribute Subset Evaluator (supervised, Class (nominal): 618 Actividad):
+	Wrapper Subset Evaluator
+	Learning scheme: weka.classifiers.trees.J48
+	Scheme options: -C 0.25 -M 2           
+	Accuracy estimation: classification error
+	Number of folds for accuracy estimation: 5
+
+Selected attributes: 37,48,579 : 3
+                     Psi_e_A
+                     PCR
+                     LOGPcons
+

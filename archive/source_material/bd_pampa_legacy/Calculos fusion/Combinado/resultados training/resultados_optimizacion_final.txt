@@ -1,0 +1,14 @@
+--- REPORTE DE OPTIMIZACIÓN DEL MODELO HÍBRIDO DEFINITIVO (Random Forest) ---
+
+--- Mejores Hiperparámetros Encontrados ---
+{'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 200}
+
+--- Rendimiento del Modelo Optimizado (Promedio 10-fold CV) ---
+--------------------------------------------------
+  Accuracy:         0.7193
+  ROC AUC:          0.8042
+  BACC:             0.7143
+  Sensitivity:      0.7852
+  Specificity:      0.6434
+  Kappa:            0.4316
+--------------------------------------------------
