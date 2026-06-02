@@ -8,3 +8,6 @@ shap>=0.44
 rdkit==2025.9.6
 jupyter>=1.0
 openpyxl>=3.1
+python-docx>=1.1
+pillow>=10.0
+pypdfium2>=4.30

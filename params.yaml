@@ -1,0 +1,43 @@
+project:
+  name: Permeability-PAMPA-ML
+  endpoint: PAMPA passive intestinal permeability
+  random_seed: 42
+
+data:
+  training_11: data/raw/training_11.csv
+  test_11: data/raw/test_11.csv
+  external_11: data/raw/external_11.csv
+  training_50: data/raw/training_50.csv
+  test_50: data/raw/test_50.csv
+  external_50: data/raw/external_50.csv
+  target: Actividad
+
+model:
+  path: models/best_rf_pampa.pkl
+  selected_features:
+    - LOGPcons
+    - MACCSFP125
+    - PCR
+    - Psi_e_A
+    - P_VSA_ppp_D
+    - Mp
+    - SpMin1_Bh(p)
+    - SHED_AL
+    - SM12_AEA(ri)
+    - P_VSA_s_3
+    - MATS5m
+
+validation:
+  metric_tolerance: 0.001
+  cv_folds: 10
+  applicability_domain_h_star: 0.0083
+
+screening:
+  probability_threshold: 0.60
+  source_library_minimum_size: 10000
+  drugbank_candidates: results/screening/DrugBank_Candidatos_Tesis.csv
+  pre_screening_candidates: results/screening/Pre_Cribado_5_Moleculas.csv
+
+mlflow:
+  tracking_uri: mlruns
+  experiment_name: pampa_qsar_reproducibility

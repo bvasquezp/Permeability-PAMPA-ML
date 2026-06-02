@@ -1,0 +1,15 @@
+\begin{table}[H]
+\centering
+\caption{DrugBank virtual-screening funnel generated from the final candidate table.}
+\label{tab:py_drugbank_flow}
+\begin{tabular}{lrp{0.52\textwidth}}
+\toprule
+Stage & Compounds & Criterion \\
+\midrule
+Complete DrugBank source & >10000 & Starting screening library before descriptor availability and curation \\
+High-probability candidates & 863 & Predicted permeable probability >= 0.60 \\
+Inside applicability domain & 850 & Leverage h <= 0.0083 \\
+Final prioritized candidates & 770 & Inside AD and Lipinski viable \\
+\bottomrule
+\end{tabular}
+\end{table}

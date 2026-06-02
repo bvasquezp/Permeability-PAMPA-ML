@@ -1,0 +1,4 @@
+Dataset,Total,Permeable,Non-permeable,Permeable (%)
+Training,4357,2332,2025,53.5
+Internal test,1090,583,507,53.5
+External validation,486,443,43,91.2

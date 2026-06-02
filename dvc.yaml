@@ -1,0 +1,69 @@
+stages:
+  data_manifest:
+    cmd: python src/build_data_manifest.py
+    deps:
+      - src/build_data_manifest.py
+      - data/raw/training_11.csv
+      - data/raw/test_11.csv
+      - data/raw/external_11.csv
+      - data/raw/training_50.csv
+      - data/raw/test_50.csv
+      - data/raw/external_50.csv
+      - models/best_rf_pampa.pkl
+      - results/metrics/evaluacion_final_datasets.csv
+      - results/screening/DrugBank_Candidatos_Tesis.csv
+      - results/screening/Pre_Cribado_5_Moleculas.csv
+    outs:
+      - results/pipeline/data_manifest.json
+      - results/pipeline/data_manifest.csv
+
+  validate_project:
+    cmd: python src/validate_project.py
+    deps:
+      - src/validate_project.py
+      - data/raw/training_11.csv
+      - data/raw/test_11.csv
+      - data/raw/external_11.csv
+      - data/raw/training_50.csv
+      - data/raw/test_50.csv
+      - data/raw/external_50.csv
+      - models/best_rf_pampa.pkl
+      - results/screening/DrugBank_Candidatos_Tesis.csv
+      - results/screening/Pre_Cribado_5_Moleculas.csv
+      - results/screening/Reporte_Lipinski_Candidatos.csv
+
+  reproduce_final_metrics:
+    cmd: python src/check_final_metrics.py --tolerance ${validation.metric_tolerance}
+    deps:
+      - src/check_final_metrics.py
+      - data/raw/training_11.csv
+      - data/raw/test_11.csv
+      - data/raw/external_11.csv
+      - models/best_rf_pampa.pkl
+      - results/metrics/evaluacion_final_datasets.csv
+    params:
+      - validation.metric_tolerance
+
+  compare_models:
+    cmd: python src/evaluate_models.py --dataset ${data.training_11} --output results/metrics/model_comparison.csv --folds ${validation.cv_folds}
+    deps:
+      - src/evaluate_models.py
+      - data/raw/training_11.csv
+    params:
+      - data.training_11
+      - validation.cv_folds
+    outs:
+      - results/metrics/model_comparison.csv
+
+  mlflow_payload_preview:
+    cmd: python src/mlflow_tracking.py --dry-run
+    deps:
+      - src/mlflow_tracking.py
+      - src/check_final_metrics.py
+      - params.yaml
+      - models/best_rf_pampa.pkl
+      - results/metrics/evaluacion_final_datasets.csv
+      - results/metrics/cv_results_comparison.csv
+      - results/screening/DrugBank_Candidatos_Tesis.csv
+    outs:
+      - results/mlflow/mlflow_payload_preview.json

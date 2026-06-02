@@ -1,0 +1,10 @@
+Metric,Value
+Final candidates,863
+Inside applicability domain,850
+Outside applicability domain,13
+Lipinski viable,778
+Lipinski non-viable,57
+Not evaluable by Lipinski,28
+Inside AD and Lipinski viable,770
+Median probability,0.760
+Maximum probability,0.990

@@ -13,3 +13,6 @@ dependencies:
   - rdkit=2025.09.6
   - jupyter
   - openpyxl>=3.1
+  - python-docx>=1.1
+  - pillow>=10.0
+  - pypdfium2>=4.30

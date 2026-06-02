@@ -1,0 +1,8 @@
+.git/
+.venv/
+.venvn/
+__pycache__/
+.ipynb_checkpoints/
+mlruns/
+manuscript/overleaf_package/
+manuscript/*.zip

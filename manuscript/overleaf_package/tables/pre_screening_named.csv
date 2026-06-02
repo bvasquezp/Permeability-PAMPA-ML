@@ -1,0 +1,6 @@
+Internal ID,Compound/control,Role,Probability,Model call,Experimental PAMPA
+Molecule3,Compound 7,Waheed derivative,0.696,Permeable,11.7 +/- 0.51
+Molecule2,Compound 3,Waheed derivative,0.695,Permeable,12.1 +/- 0.27
+Molecule4,Donepezil,Positive PAMPA control,0.659,Permeable,22.4 +/- 0.49
+Molecule1,Compound 2,Waheed derivative,0.648,Permeable,11.1 +/- 0.43
+Molecule5,Norfloxacin,Negative PAMPA control,0.045,Non-permeable,1.43 +/- 0.08

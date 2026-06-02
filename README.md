@@ -16,6 +16,18 @@ classifier trained on selected physicochemical and structural descriptors. The
 workflow also includes external validation, applicability-domain analysis,
 SHAP-based interpretability and virtual screening of DrugBank candidates.
 
+## Quick Start
+
+For the fastest reproducibility check after cloning the repository:
+
+```powershell
+python -m pip install -r requirements.txt
+python src/run_reproducibility_pipeline.py --skip-model-comparison --skip-manuscript-assets --mlflow-preview
+```
+
+For the full user manual, see
+[`docs/MANUAL_REPRODUCIBILIDAD.md`](docs/MANUAL_REPRODUCIBILIDAD.md).
+
 ## Repository Structure
 
 - `data/`: final datasets used by the clean workflow.
@@ -46,6 +58,12 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 ```
 
+Optional MLOps tooling for experiment tracking and data-versioned pipelines:
+
+```powershell
+python -m pip install -r requirements-mlops.txt
+```
+
 Validate that the core datasets, screening outputs and final model match this
 repository version:
 
@@ -59,6 +77,16 @@ results:
 ```powershell
 python src/check_final_metrics.py
 ```
+
+Run the automated reproducibility pipeline:
+
+```powershell
+python src/run_reproducibility_pipeline.py --mlflow-preview
+```
+
+This builds a data manifest, validates file integrity, reproduces the final
+metrics, optionally compares classical classifiers, creates an MLflow-compatible
+payload preview and regenerates manuscript assets.
 
 ## Final Model
 
@@ -121,6 +149,52 @@ are intentionally ignored by Git and are not required to validate the final
 screening output.
 
 ## Reproducible Scripts
+
+### MLOps, ETL/ELT and CI/CD
+
+The repository now includes a lightweight MLOps layer intended to make the QSAR
+workflow auditable by other researchers:
+
+- `params.yaml`: central project, model, validation and screening parameters.
+- `src/build_data_manifest.py`: ETL/ELT audit step that records file sizes,
+  row/column counts and SHA256 hashes for curated datasets, model artifacts and
+  screening outputs.
+- `src/run_reproducibility_pipeline.py`: one-command runner for validation,
+  metric reproduction, optional model comparison, MLflow payload preview and
+  manuscript asset generation.
+- `src/mlflow_tracking.py`: logs parameters, final metrics and selected
+  artifacts to MLflow when optional dependencies are installed; `--dry-run`
+  writes the payload without requiring MLflow.
+- `dvc.yaml` and `.dvcignore`: DVC-compatible pipeline definition for data
+  lineage and reproducible stages. A remote DVC storage can be added later for
+  large proprietary DrugBank/alvaDesc exports.
+- `.github/workflows/ci.yml`: CI checks for GitHub Actions. On push, pull
+  request or manual dispatch it builds the manifest, validates core files,
+  reproduces final metrics and creates the MLflow payload preview.
+
+Run only the core automated checks:
+
+```powershell
+python src/run_reproducibility_pipeline.py --skip-model-comparison --skip-manuscript-assets --mlflow-preview
+```
+
+Preview the MLflow run payload:
+
+```powershell
+python src/mlflow_tracking.py --dry-run
+```
+
+With the optional MLOps dependencies installed, log a local MLflow run:
+
+```powershell
+python src/mlflow_tracking.py
+```
+
+With DVC installed, reproduce the declared stages:
+
+```powershell
+dvc repro
+```
 
 Convert CSV to ARFF for WEKA:
 

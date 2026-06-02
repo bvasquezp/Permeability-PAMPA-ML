@@ -1,0 +1,11 @@
+DrugBank ID,Thesis-reported name,SDF-verified name,Thesis probability,Current probability,Name audit
+DB06209,Prasugrel,prasugrel,0.980,0.946,Match
+DB01656,Vatalanib,Roflumilast,0.978,0.890,Check ID/name
+DB00838,Clopidogrel,Clocortolone,0.976,0.920,Check ID/name
+DB02300,Calcipotriol,Calcipotriol,0.970,0.920,Match
+DB00317,Gefitinib,Gefitinib,0.970,0.910,Match
+DB00401,Propranolol,Nisoldipine,0.970,0.940,Check ID/name
+DB00559,Verapamil,Bosentan,0.970,0.930,Check ID/name
+DB04967,Lucanthone,Lucanthone,0.970,0.930,Match
+DB04715,Imidazopyridazine,IMIDAZOPYRIDAZIN 1,0.970,0.960,Check ID/name
+DB00269,Chlorpromazine,Chlorotrianisene,0.960,0.930,Check ID/name

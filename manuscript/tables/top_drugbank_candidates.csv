@@ -1,0 +1,11 @@
+DrugBank ID,Generic name,Probability,Leverage,MW,LogP,Lipinski
+DB00404,Alprazolam,0.990,0.001,308.77,3.580,Yes
+DB03786,2-(3-Cyano-4-Isobutoxy-Phenyl)-4-Methyl-5-Thiazole-Carboxylic Acid,0.980,0.001,316.38,3.720,Yes
+DB04854,Febuxostat,0.980,0.001,316.38,3.720,Yes
+DB03899,9-Butyl-8-(4-Methoxybenzyl)-9h-Purin-6-Amine,0.970,0.001,311.39,2.810,Yes
+DB04920,Clevidipine,0.970,0.002,456.32,4.250,Yes
+DB00496,Darifenacin,0.960,0.001,426.56,3.960,Yes
+DB00561,Doxapram,0.960,0.002,378.52,3.170,Yes
+DB04715,IMIDAZOPYRIDAZIN 1,0.960,0.001,306.37,3.420,Yes
+DB05838,OPC-51803,0.960,0.001,454.01,5.380,Yes
+DB00656,Trazodone,0.953,0.002,371.87,2.360,Yes

@@ -61,7 +61,7 @@ def evaluate_models(
 
     models = {
         "DecisionTree_J48_like": DecisionTreeClassifier(random_state=42),
-        "LogisticRegression": LogisticRegression(max_iter=1000, random_state=42),
+        "LogisticRegression": LogisticRegression(max_iter=5000, random_state=42),
         "kNN_IBk_like_k5": KNeighborsClassifier(n_neighbors=5),
         "RandomForest": RandomForestClassifier(random_state=42),
         "SVM": SVC(probability=True, random_state=42),
