@@ -402,7 +402,7 @@ change input files.
   model against stored results.
 - `notebooks/07_Prediccion_nuevas_moleculas_agentes_locales.ipynb`: run the
   deterministic no-API agent panel for new candidate molecules.
-- `notebooks/08_Herramienta_interactiva_serie_C.ipynb`: guided notebook tool to
+- `notebooks/08_Herramienta_interactiva_series_ABC.ipynb`: guided notebook tool to
   generate preliminary SMILES for series A/B/C or generic SMILES inputs, run
   RDKit/Lipinski triage, prepare the alvaDesc 11-descriptor template and inject
   completed descriptors into the local PAMPA agent panel.
@@ -415,6 +415,52 @@ Recommended order:
 
 The notebooks call maintained scripts in `src/` whenever possible, so the
 interactive explanation and automated pipeline share the same logic.
+
+## Candidate Series A/B/C Screening Example
+
+The example panel in `notebooks/08_Herramienta_interactiva_series_ABC.ipynb`
+uses the thesis model with the 11 alvaDesc/WEKA descriptors. The alvaDesc
+exports were merged with:
+
+```powershell
+python src/merge_alvadesc_exports.py --descriptors "%USERPROFILE%\Downloads\descriptores0-2D.txt" --maccs "%USERPROFILE%\Downloads\MACCS166.txt" --output data/query/candidate_compounds_alvadesc_11_from_exports.csv
+```
+
+Predictions are available in:
+
+- `results/agentic/candidate_compounds_alvadesc_predictions.csv`
+- `results/agentic/candidate_compounds_alvadesc_report.md`
+- `results/screening/candidate_compounds_rdkit_triage.csv`
+
+Summary:
+
+| Series | Compounds | Model outcome |
+| --- | ---: | --- |
+| A | 6 | 6/6 predicted non-permeable |
+| B | 8 | 8/8 predicted permeable |
+| C | 4 | 4/4 predicted permeable |
+
+Top predicted permeable candidates:
+
+| Compound | Probability permeable |
+| --- | ---: |
+| C3 | 0.717 |
+| B7 | 0.711 |
+| B6 | 0.682 |
+| C4 | 0.677 |
+| C2 | 0.674 |
+
+Prediction overview:
+
+![Candidate compound PAMPA probabilities](results/figures/candidate_compounds_probability_bars.png)
+
+Series distribution:
+
+![Candidate compound probability distribution by series](results/figures/candidate_compounds_series_distribution.png)
+
+Descriptor trend:
+
+![LOGPcons vs PAMPA probability](results/figures/candidate_compounds_logp_probability_scatter.png)
 
 ## Historical Material
 
