@@ -1,0 +1,3 @@
+example_id,probability_permeable,predicted_label,predicted_class,model_id,descriptor_contract,approved_for_decision
+positive_external_example,0.775021029088406,1,PERMEABLE,thesis_rf_11_alvadesc_weka,thesis_11_descriptors_v1,True
+negative_external_example,0.5463936469456276,1,PERMEABLE,thesis_rf_11_alvadesc_weka,thesis_11_descriptors_v1,True

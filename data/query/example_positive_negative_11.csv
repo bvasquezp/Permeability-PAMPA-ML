@@ -1,0 +1,3 @@
+example_id,LOGPcons,MACCSFP125,PCR,Psi_e_A,P_VSA_ppp_D,Mp,SpMin1_Bh(p),SHED_AL,SM12_AEA(ri),P_VSA_s_3,MATS5m,Actividad
+positive_external_example,4.206,1,1.5558,7.4928,0.0,0.7241,2.0559,8.0031,3.5699,49.315,-0.0105,Act1
+negative_external_example,1.8905,0,1.3308,7.8966,18.0108,0.6457,2.0251,6.7036,3.7877,48.6232,-0.1854,Act-1

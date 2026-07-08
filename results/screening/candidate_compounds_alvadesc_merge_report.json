@@ -1,0 +1,22 @@
+{
+  "records": 18,
+  "descriptor_source": "C:\\Users\\benja\\Downloads\\descriptores0-2D.txt",
+  "maccs_source": "C:\\Users\\benja\\Downloads\\MACCS166.txt",
+  "output": "data\\query\\candidate_compounds_alvadesc_11_template.csv",
+  "merged_output": "data\\query\\candidate_compounds_alvadesc_merged_full.csv",
+  "compound_id_mapping": "default_A1-A6_B1-B8_C1-C4_order",
+  "required_descriptors": [
+    "LOGPcons",
+    "MACCSFP125",
+    "PCR",
+    "Psi_e_A",
+    "P_VSA_ppp_D",
+    "Mp",
+    "SpMin1_Bh(p)",
+    "SHED_AL",
+    "SM12_AEA(ri)",
+    "P_VSA_s_3",
+    "MATS5m"
+  ],
+  "missing_descriptors": []
+}

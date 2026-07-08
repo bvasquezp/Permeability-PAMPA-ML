@@ -1,0 +1,18 @@
+{
+  "tex_path": "manuscript\\pampa_qsar_manuscript.tex",
+  "bib_path": "manuscript\\references.bib",
+  "bib_entries": 24,
+  "cited_keys": 24,
+  "undefined_citations": [],
+  "unused_bib_entries": [],
+  "entries_missing_doi_or_url": [
+    "Lundberg2017",
+    "OECD2007",
+    "Pedregosa2011",
+    "Todeschini2000",
+    "VasquezPAMPARepository",
+    "VasquezPerez2026Thesis",
+    "alvaDescSoftware"
+  ],
+  "duplicate_dois": {}
+}

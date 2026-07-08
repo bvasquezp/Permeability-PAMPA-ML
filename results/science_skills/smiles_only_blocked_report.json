@@ -1,0 +1,22 @@
+{
+  "workflow": "pampa_computational_discovery",
+  "mode": "smiles_only_blocked",
+  "records": [
+    {
+      "input_smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "canonical_smiles": "CC(=O)Oc1ccccc1C(=O)O",
+      "valid": true,
+      "lipinski": {
+        "mw": 180.159,
+        "logp": 1.31,
+        "hbd": 1,
+        "hba": 3,
+        "violations": 0,
+        "pass": true
+      },
+      "approved_for_decision": false,
+      "prediction": null,
+      "warning": "Exact thesis replication requires the 11 selected alvaDesc/WEKA descriptors; SMILES alone is insufficient for the validated thesis model."
+    }
+  ]
+}

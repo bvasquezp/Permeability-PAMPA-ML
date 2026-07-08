@@ -1,0 +1,12 @@
+{
+  "mode": "candidate_smiles_preparation",
+  "records": 18,
+  "valid_smiles": 18,
+  "outputs": {
+    "smiles": "data\\query\\series_ABC_preliminary_smiles.csv",
+    "triage": "results\\screening\\series_ABC_rdkit_triage.csv",
+    "alvadesc_template": "data\\query\\series_ABC_alvadesc_11_template.csv",
+    "figure": "results\\figures\\series_ABC_structures.png"
+  },
+  "warning": "Template-generated SMILES should be confirmed against original MOL/SDF/ChemDraw structures before final experimental decisions. The thesis PAMPA model still requires the 11 alvaDesc/WEKA descriptors."
+}

@@ -1,0 +1,47 @@
+{
+  "workflow": "pampa_computational_discovery",
+  "mode": "thesis_descriptor_panel",
+  "endpoint": "PAMPA Pe >= 10 x 10^-6 cm/s",
+  "model_path": "models\\best_rf_pampa.pkl",
+  "descriptor_contract": [
+    "LOGPcons",
+    "MACCSFP125",
+    "PCR",
+    "Psi_e_A",
+    "P_VSA_ppp_D",
+    "Mp",
+    "SpMin1_Bh(p)",
+    "SHED_AL",
+    "SM12_AEA(ri)",
+    "P_VSA_s_3",
+    "MATS5m"
+  ],
+  "input_validation": {
+    "valid": true,
+    "required_descriptors": [
+      "LOGPcons",
+      "MACCSFP125",
+      "PCR",
+      "Psi_e_A",
+      "P_VSA_ppp_D",
+      "Mp",
+      "SpMin1_Bh(p)",
+      "SHED_AL",
+      "SM12_AEA(ri)",
+      "P_VSA_s_3",
+      "MATS5m"
+    ],
+    "present_descriptor_count": 11,
+    "missing_descriptors": [],
+    "row_count": 1090
+  },
+  "metrics_if_labels_present": {
+    "accuracy": 0.7513761467889908,
+    "sensitivity": 0.7598627787307033,
+    "specificity": 0.7416173570019724,
+    "auc": 0.8299281753563321,
+    "mcc": 0.5009693947934352,
+    "f1": 0.7657735522904062
+  },
+  "warnings": []
+}

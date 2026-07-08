@@ -1,0 +1,8 @@
+compound_id,preliminary_smiles,LOGPcons,MACCSFP125,PCR,Psi_e_A,P_VSA_ppp_D,Mp,SpMin1_Bh(p),SHED_AL,SM12_AEA(ri),P_VSA_s_3,MATS5m
+B1,Cc1noc(/C=C/c2ccc(F)cc2)c1[N+](=O)[O-],,,,,,,,,,,
+B2,Cc1noc(/C=C/c2ccc(Cl)cc2)c1[N+](=O)[O-],,,,,,,,,,,
+B3,Cc1noc(/C=C/c2ccc(Br)cc2)c1[N+](=O)[O-],,,,,,,,,,,
+B4,Cc1noc(/C=C/c2ccc(I)cc2)c1[N+](=O)[O-],,,,,,,,,,,
+B5,Cc1noc(/C=C/c2ccc([H])cc2)c1[N+](=O)[O-],,,,,,,,,,,
+B6,Cc1noc(/C=C/c2ccc(OC)cc2)c1[N+](=O)[O-],,,,,,,,,,,
+B7,Cc1noc(/C=C/c2ccc(N(C)C)cc2)c1[N+](=O)[O-],,,,,,,,,,,

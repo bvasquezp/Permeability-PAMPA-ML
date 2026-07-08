@@ -1,0 +1,37 @@
+{
+  "workflow": "local_no_api_agent_panel",
+  "api_required": false,
+  "row_count": 18,
+  "agents": [
+    {
+      "agent": "DescriptorAgent",
+      "status": "pass",
+      "warnings": []
+    },
+    {
+      "agent": "ChemicalAgent",
+      "status": "not_applicable",
+      "warnings": [
+        "No SMILES column was provided; chemical structure checks were skipped."
+      ]
+    },
+    {
+      "agent": "ModelAgent",
+      "status": "pass",
+      "warnings": []
+    },
+    {
+      "agent": "ApplicabilityDomainAgent",
+      "status": "pass",
+      "warnings": []
+    },
+    {
+      "agent": "PhysicsAgent",
+      "status": "pass",
+      "warnings": []
+    }
+  ],
+  "approved_predictions": 18,
+  "predicted_permeable": 12,
+  "predicted_non_permeable": 6
+}

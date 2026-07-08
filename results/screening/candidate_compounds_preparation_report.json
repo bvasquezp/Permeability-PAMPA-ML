@@ -1,0 +1,13 @@
+{
+  "mode": "notebook_frontend_candidate_preparation",
+  "api_required": false,
+  "records": 18,
+  "valid_smiles": 18,
+  "outputs": {
+    "input_table": "data\\query\\candidate_compounds_from_notebook.csv",
+    "smiles": "data\\query\\candidate_compounds_preliminary_smiles.csv",
+    "triage": "results\\screening\\candidate_compounds_rdkit_triage.csv",
+    "alvadesc_template": "data\\query\\candidate_compounds_alvadesc_11_template.csv",
+    "figure": "results\\figures\\candidate_compounds_structures.png"
+  }
+}

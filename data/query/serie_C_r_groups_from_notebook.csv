@@ -1,0 +1,8 @@
+compound_id,series,scaffold,r_group,yield_percent,substituent
+B1,B,B,4-F,93,F
+B2,B,B,4-Cl,96,Cl
+B3,B,B,4-Br,87,Br
+B4,B,B,4-I,92,I
+B5,B,B,4-H,93,H
+B6,B,B,4-OCH3,41,OCH3
+B7,B,B,4-N(CH3)2,25,N(CH3)2

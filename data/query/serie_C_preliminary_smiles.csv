@@ -1,0 +1,8 @@
+compound_id,series,scaffold,r_group,substituent,yield_percent,preliminary_smiles,source
+B1,B,B,4-F,F,93,Cc1noc(/C=C/c2ccc(F)cc2)c1[N+](=O)[O-],scaffold template encoded in src/prepare_candidate_smiles.py
+B2,B,B,4-Cl,Cl,96,Cc1noc(/C=C/c2ccc(Cl)cc2)c1[N+](=O)[O-],scaffold template encoded in src/prepare_candidate_smiles.py
+B3,B,B,4-Br,Br,87,Cc1noc(/C=C/c2ccc(Br)cc2)c1[N+](=O)[O-],scaffold template encoded in src/prepare_candidate_smiles.py
+B4,B,B,4-I,I,92,Cc1noc(/C=C/c2ccc(I)cc2)c1[N+](=O)[O-],scaffold template encoded in src/prepare_candidate_smiles.py
+B5,B,B,4-H,H,93,Cc1noc(/C=C/c2ccc([H])cc2)c1[N+](=O)[O-],scaffold template encoded in src/prepare_candidate_smiles.py
+B6,B,B,4-OCH3,OCH3,41,Cc1noc(/C=C/c2ccc(OC)cc2)c1[N+](=O)[O-],scaffold template encoded in src/prepare_candidate_smiles.py
+B7,B,B,4-N(CH3)2,N(CH3)2,25,Cc1noc(/C=C/c2ccc(N(C)C)cc2)c1[N+](=O)[O-],scaffold template encoded in src/prepare_candidate_smiles.py
