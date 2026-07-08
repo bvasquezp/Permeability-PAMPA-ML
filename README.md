@@ -214,6 +214,149 @@ Run the 10 WEKA selector combinations in parallel:
 python src/weka_feature_selection.py run --weka-jar D:/Weka-3-6/weka.jar --input-arff results/weka/training_11.arff --logs-dir results/weka/logs --workers 4
 ```
 
+Rebuild the thesis alvaDesc/fingerprint feature-selection route from the
+historical ARFF and WEKA artifacts:
+
+```powershell
+python src/audit_thesis_feature_pipeline.py
+python src/rebuild_thesis_feature_pipeline.py
+```
+
+This reconstructs the 783-feature fused table, applies the EDA filters
+(`VarianceThreshold=0.05`, Mann-Whitney `alpha=0.05`, Spearman `|r|>0.90`),
+parses the legacy WEKA consensus, applies the historical 0.4 consensus threshold
+against the observed maximum vote count, and audits optimized 11-feature panels
+against the exact 11 descriptors used in the thesis. Outputs are written to
+`results/thesis_feature_pipeline/`.
+
+### Governed RDKit surrogate screening
+
+The thesis model remains the validated scientific baseline because it uses the
+11 descriptors selected from the alvaDesc/WEKA workflow. The RDKit route is now
+handled as a governed surrogate candidate: it can be trained and audited from
+SMILES, but MCP/agents must not treat it as approved unless it passes the metric
+gates in `models/model_registry.json`.
+
+First audit the SMILES workbook and rebuild the corrected RDKit datasets:
+
+```powershell
+python src/audit_rdkit_dataset.py
+```
+
+This validates the target inversion rule (`Target_corrected = 1 - Target`),
+reports duplicate/conflicting structures, and writes:
+
+- `data/processed/rdkit_original_split_corrected.csv`
+- `data/processed/rdkit_pampa_compounds.csv`
+- `results/diagnostics/rdkit_dataset_audit.json`
+- `results/diagnostics/rdkit_dataset_duplicates.csv`
+
+Train a candidate surrogate with the formal gates:
+
+```powershell
+python src/train_rdkit_candidate.py
+```
+
+Train the calibrated v2 candidate that mirrors the thesis operating strategy
+(undersampling-aware interpretation plus asymmetric class weights and an
+internal decision-threshold search):
+
+```powershell
+python src/train_rdkit_candidate.py --candidate-id rdkit_surrogate_candidate_v2 --tune-class-weight --tune-threshold
+```
+
+Train a strict thesis-protocol RDKit surrogate with fixed 5-fold CV,
+majority-class undersampling, `class_weight={0: 1.5, 1: 1}` and decision
+threshold `0.5`:
+
+```powershell
+python src/train_rdkit_candidate.py --candidate-id rdkit_surrogate_candidate_v3_thesis_protocol --thesis-protocol
+```
+
+To attack the representation gap, train the same thesis protocol with a broader
+RDKit+MACCS panel before feature selection:
+
+```powershell
+python src/train_rdkit_candidate.py --candidate-id rdkit_surrogate_candidate_v4_rdkit_maccs_thesis_protocol --thesis-protocol --feature-space rdkit_maccs
+```
+
+For a quick development smoke test, use fewer folds and trees:
+
+```powershell
+python src/train_rdkit_candidate.py --candidate-id rdkit_surrogate_candidate_v2 --tune-class-weight --tune-threshold --n-splits 2 --n-repeats 1 --selection-estimators 30 --final-estimators 80
+```
+
+The candidate writes:
+
+- `models/rdkit_surrogate_candidate_v2.pkl`
+- `models/model_registry.json`
+- `results/metrics/rdkit_surrogate_candidate_v2_cv.csv`
+- `results/metrics/rdkit_surrogate_candidate_v2_weight_threshold_grid.csv`
+- `results/metrics/rdkit_surrogate_candidate_v2_internal_thresholds.csv`
+- `results/metrics/rdkit_surrogate_candidate_v2_internal.csv`
+- `results/metrics/rdkit_surrogate_candidate_v2_external.csv`
+- `results/metrics/rdkit_surrogate_candidate_v2_gate_report.json`
+
+For thesis-protocol runs, replace `rdkit_surrogate_candidate_v2` with
+`rdkit_surrogate_candidate_v3_thesis_protocol` in the artifact names.
+
+MCP prediction is deliberately blocked for scientific decisions when no approved
+SMILES model is active:
+
+```powershell
+python src/agentic/mcp_server.py predict "CC(=O)Oc1ccccc1C(=O)O"
+```
+
+The response includes `approved_for_decision=false` unless a model has status
+`approved` in the registry.
+
+### Science-skill style workflows
+
+This repository includes local workflows inspired by Google DeepMind Science
+Skills, adapted to the PAMPA thesis rather than installed as an external
+Antigravity plugin:
+
+- `skills/pampa_computational_discovery/SKILL.md`: exact thesis-replica
+  prediction from the 11 selected alvaDesc/WEKA descriptors.
+- `skills/pampa_literature_insights/SKILL.md`: manuscript citation audit and
+  optional open-access literature search.
+
+Validate a descriptor panel:
+
+```powershell
+python -m src.science_skills.pampa_computational_discovery validate-panel --input data/raw/test_11.csv
+```
+
+Predict from the exact thesis descriptors:
+
+```powershell
+python -m src.science_skills.pampa_computational_discovery predict-panel --input data/raw/test_11.csv --output results/science_skills/test_11_predictions.csv
+```
+
+Run the local no-API agent panel over a descriptor table:
+
+```powershell
+python src/agentic/local_orchestrator.py --input data/query/example_positive_negative_11.csv --output results/agentic/local_agent_predictions.csv --report-json results/agentic/local_agent_report.json --report-md results/agentic/local_agent_report.md --id-column example_id
+```
+
+This deterministic panel uses `DescriptorAgent`, `ChemicalAgent`,
+`ModelAgent`, `ApplicabilityDomainAgent`, `PhysicsAgent` and `ReportAgent`
+without calling an external LLM API. The validated thesis prediction always
+comes from `models/best_rf_pampa.pkl` and the exact 11 alvaDesc/WEKA
+descriptors.
+
+Audit manuscript references:
+
+```powershell
+python -m src.science_skills.pampa_literature_insights audit-manuscript --tex manuscript/pampa_qsar_manuscript.tex --bib manuscript/references.bib
+```
+
+Rebuild the external PubChem bridge, recover missing SMILES, and compare the thesis external panel with the RDKit surrogate on the same 486 compounds:
+
+```powershell
+python src/rebuild_and_compare_external.py
+```
+
 Build the descriptor-vote consensus table from WEKA logs:
 
 ```powershell
@@ -241,9 +384,37 @@ python src/rebuild_drugbank_ids.py --sdf archive/source_material/qsar_inputs/all
 
 ## Notebooks
 
-- `notebooks/01_Analisis_y_preparacion_datos.ipynb`
-- `notebooks/02_Entrenamiento_RandomForest.ipynb`
-- `notebooks/03_Cribado_Virtual_PAMPA.ipynb`
+The notebooks are written as a step-by-step manual for non-programmer reviewers.
+Each notebook starts with an editable configuration cell that indicates where to
+change input files.
+
+- `notebooks/01_Analisis_y_preparacion_datos.ipynb`: inspect curated training,
+  internal test and external validation tables.
+- `notebooks/02_Entrenamiento_RandomForest.ipynb`: load the final Random Forest,
+  reproduce metrics and inspect feature importance.
+- `notebooks/03_Cribado_Virtual_PAMPA.ipynb`: predict new molecules from a CSV
+  containing the 11 thesis descriptors.
+- `notebooks/04_Reconstruccion_dataset_tesis.ipynb`: rebuild the 783-feature
+  alvaDesc/fingerprint matrix from legacy ARFF files.
+- `notebooks/05_EDA_WEKA_seleccion_descriptores.ipynb`: inspect EDA, RFE, WEKA
+  consensus and 11-feature panel optimization.
+- `notebooks/06_Validacion_modelo_tesis.ipynb`: validate the serialized thesis
+  model against stored results.
+- `notebooks/07_Prediccion_nuevas_moleculas_agentes_locales.ipynb`: run the
+  deterministic no-API agent panel for new candidate molecules.
+- `notebooks/08_Herramienta_interactiva_serie_C.ipynb`: guided notebook tool to
+  generate preliminary SMILES for series A/B/C or generic SMILES inputs, run
+  RDKit/Lipinski triage, prepare the alvaDesc 11-descriptor template and inject
+  completed descriptors into the local PAMPA agent panel.
+
+Recommended order:
+
+```text
+01 -> 02 -> 03 -> 04 -> 05 -> 06 -> 07 -> 08
+```
+
+The notebooks call maintained scripts in `src/` whenever possible, so the
+interactive explanation and automated pipeline share the same logic.
 
 ## Historical Material
 

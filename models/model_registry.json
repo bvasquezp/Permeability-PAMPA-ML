@@ -1,0 +1,80 @@
+{
+  "active_model_id": null,
+  "models": {
+    "rdkit_surrogate_candidate_v1": {
+      "path": "models\\rdkit_surrogate_candidate_v1.pkl",
+      "status": "candidate",
+      "descriptor_schema_id": "rdkit-selected-v1",
+      "gate_report": "results\\metrics\\rdkit_surrogate_candidate_v1_gate_report.json"
+    },
+    "rdkit_surrogate_candidate_v2": {
+      "path": "models\\rdkit_surrogate_candidate_v2.pkl",
+      "status": "candidate",
+      "descriptor_schema_id": "rdkit-selected-v1",
+      "gate_report": "results\\metrics\\rdkit_surrogate_candidate_v2_gate_report.json",
+      "class_weight": {
+        "0": 1.0,
+        "1": 1.0
+      },
+      "decision_threshold": 0.45
+    },
+    "rdkit_surrogate_candidate_v3_thesis_protocol": {
+      "path": "models\\rdkit_surrogate_candidate_v3_thesis_protocol.pkl",
+      "status": "candidate",
+      "descriptor_schema_id": "rdkit-selected-v1",
+      "gate_report": "results\\metrics\\rdkit_surrogate_candidate_v3_thesis_protocol_gate_report.json",
+      "class_weight": {
+        "0": 1.5,
+        "1": 1.0
+      },
+      "decision_threshold": 0.5
+    },
+    "rdkit_surrogate_candidate_v4_rdkit_maccs_thesis_protocol": {
+      "path": "models\\rdkit_surrogate_candidate_v4_rdkit_maccs_thesis_protocol.pkl",
+      "status": "candidate",
+      "descriptor_schema_id": "rdkit-selected-v1",
+      "gate_report": "results\\metrics\\rdkit_surrogate_candidate_v4_rdkit_maccs_thesis_protocol_gate_report.json",
+      "class_weight": {
+        "0": 1.5,
+        "1": 1.0
+      },
+      "decision_threshold": 0.5
+    },
+    "rdkit_teacher_panel_v1_smoke": {
+      "path": "models\\rdkit_teacher_panel_v1_smoke.pkl",
+      "status": "candidate",
+      "descriptor_schema_id": "rdkit_maccs",
+      "gate_report": "results\\metrics\\rdkit_teacher_panel_v1_smoke_gate_report.json",
+      "class_weight": {
+        "0": 1.5,
+        "1": 1.0
+      },
+      "decision_threshold": 0.5,
+      "teacher_model": "models\\best_rf_pampa.pkl"
+    },
+    "rdkit_teacher_panel_v1": {
+      "path": "models\\rdkit_teacher_panel_v1.pkl",
+      "status": "candidate",
+      "descriptor_schema_id": "rdkit_maccs",
+      "gate_report": "results\\metrics\\rdkit_teacher_panel_v1_gate_report.json",
+      "class_weight": {
+        "0": 1.5,
+        "1": 1.0
+      },
+      "decision_threshold": 0.5,
+      "teacher_model": "models\\best_rf_pampa.pkl"
+    },
+    "rdkit_teacher_panel_v2_maccs_morgan_smoke": {
+      "path": "models\\rdkit_teacher_panel_v2_maccs_morgan_smoke.pkl",
+      "status": "candidate",
+      "descriptor_schema_id": "rdkit_maccs_morgan",
+      "gate_report": "results\\metrics\\rdkit_teacher_panel_v2_maccs_morgan_smoke_gate_report.json",
+      "class_weight": {
+        "0": 1.5,
+        "1": 1.0
+      },
+      "decision_threshold": 0.5,
+      "teacher_model": "models\\best_rf_pampa.pkl"
+    }
+  }
+}

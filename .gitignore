@@ -1,8 +1,25 @@
 .venvn/
 __pycache__/
+**/__pycache__/
 .ipynb_checkpoints/
 *.log
 !archive/source_material/**/*.log
+
+# Local exploration and temporary extraction files.
+scratch_*.py
+tmp_pdf_pages/
+results/figures/_debug*.png
+
+# Local spreadsheets/downloads used during reconstruction.
+dataset*.xlsx
+external_set*.xlsx
+
+# Experimental model candidates can be regenerated and should not be promoted
+# to the public repository unless explicitly approved.
+models/rdkit_surrogate_candidate_*.pkl
+models/rdkit_teacher_panel_*.pkl
+models/surrogate_rf_pampa*.pkl
+models/thesis_rebuilt_panel_candidate.pkl
 
 # Large local DrugBank exports kept for provenance but not suitable for normal GitHub.
 # Recreate or request these from the original DrugBank/Mordred workflow if needed.

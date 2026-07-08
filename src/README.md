@@ -10,4 +10,7 @@ Scripts mantenibles para reproducir las tareas que antes estaban repartidas en
 - `check_final_metrics.py`: recalcula las metricas finales del modelo serializado
   y las compara con `results/metrics/evaluacion_final_datasets.csv`.
 - `select_features.py`: reduce descriptores por varianza, RFE y correlacion.
+- `agentic/train_surrogate_model.py`: entrena un surrogate RDKit directo desde SMILES.
+- `agentic/train_rdkit_eda_surrogate.py`: entrena un surrogate RDKit con EDA, correlacion y RFE.
+- `agentic/screen_smiles.py`: evalua nuevos SMILES con Lipinski, dominio de aplicabilidad y probabilidad.
 - `rebuild_drugbank_ids.py`: reconstruye `Lista_DrugBank_IDs.csv` desde el SDF.
