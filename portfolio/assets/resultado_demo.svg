@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" role="img" aria-label="Vista ilustrativa de resultados generados por el script con datos sintéticos">
+<rect width="1200" height="690" fill="#f8f7f1"/>
+<rect x="36" y="28" width="1128" height="634" rx="22" fill="#fff" stroke="#dce4dc" stroke-width="2"/>
+<rect x="36" y="28" width="1128" height="90" rx="22" fill="#203a32"/>
+<rect x="36" y="93" width="1128" height="25" fill="#203a32"/>
+<text x="72" y="70" font-family="Arial,sans-serif" font-size="15" fill="#a3c8b6" font-weight="bold" letter-spacing="2">CASO DEMOSTRATIVO / PYTHON DATA AUTOMATION</text>
+<text x="72" y="103" font-family="Arial,sans-serif" font-size="31" fill="#fff" font-weight="bold">De registros dispersos a datos verificables</text>
+<g font-family="Arial,sans-serif">
+<rect x="72" y="147" width="326" height="195" rx="15" fill="#f4f6f2" stroke="#dbe4dd"/>
+<text x="95" y="179" font-size="16" fill="#4d6b5d" font-weight="bold">ENTRADA · CSV SIN VALIDAR</text>
+<text x="95" y="221" font-size="51" fill="#1f3930" font-weight="bold">6</text>
+<text x="149" y="219" font-size="17" fill="#4b5c53">registros</text>
+<text x="95" y="255" font-size="15" fill="#687970">ID repetido  ·  fecha inválida</text>
+<text x="95" y="280" font-size="15" fill="#687970">importe sin formato válido</text>
+<text x="95" y="313" font-size="14" fill="#896b42">Datos de prueba, no de clientes</text>
+<path d="M421 244 L449 244" stroke="#88ae99" stroke-width="4" stroke-linecap="round"/>
+<path d="M439 232 L451 244 L439 256" fill="none" stroke="#88ae99" stroke-width="4" stroke-linejoin="round"/>
+<rect x="475" y="147" width="307" height="195" rx="15" fill="#f1f8f2" stroke="#d1e7d8"/>
+<text x="498" y="179" font-size="16" fill="#3d7658" font-weight="bold">VALIDACIÓN AUTOMÁTICA</text>
+<text x="498" y="227" font-size="43" fill="#1e5b42" font-weight="bold">3</text>
+<text x="550" y="223" font-size="16" fill="#425950">filas limpias</text>
+<text x="498" y="279" font-size="43" fill="#9a693e" font-weight="bold">3</text>
+<text x="550" y="275" font-size="16" fill="#62574d">para revisión</text>
+<text x="498" y="316" font-size="13" fill="#567565">Sin inventar ni corregir datos ambiguos</text>
+<path d="M805 244 L833 244" stroke="#88ae99" stroke-width="4" stroke-linecap="round"/>
+<path d="M823 232 L835 244 L823 256" fill="none" stroke="#88ae99" stroke-width="4" stroke-linejoin="round"/>
+<rect x="856" y="147" width="272" height="195" rx="15" fill="#f4f6f2" stroke="#dbe4dd"/>
+<text x="879" y="179" font-size="16" fill="#4d6b5d" font-weight="bold">ENTREGABLES</text>
+<text x="879" y="219" font-size="17" fill="#263f34">✓  CSV depurado</text>
+<text x="879" y="248" font-size="17" fill="#263f34">✓  Motivos de rechazo</text>
+<text x="879" y="277" font-size="17" fill="#263f34">✓  Conciliación</text>
+<text x="879" y="306" font-size="17" fill="#263f34">✓  Resumen en Excel</text>
+<text x="74" y="390" font-size="20" fill="#213a31" font-weight="bold">SALIDAS DE LA DEMOSTRACIÓN</text>
+<rect x="72" y="414" width="670" height="187" rx="12" fill="#fff" stroke="#dce5de"/>
+<rect x="72" y="414" width="670" height="41" rx="12" fill="#e9efe9"/>
+<text x="93" y="441" font-size="15" font-weight="bold" fill="#314d3b">Factura</text><text x="275" y="441" font-size="15" font-weight="bold" fill="#314d3b">Monto</text><text x="406" y="441" font-size="15" font-weight="bold" fill="#314d3b">Pagado</text><text x="546" y="441" font-size="15" font-weight="bold" fill="#314d3b">Estado</text>
+<g font-size="16" fill="#283f34">
+<text x="93" y="484">INV01</text><text x="275" y="484">120.00</text><text x="406" y="484">120.00</text><text x="546" y="484" fill="#267451">Conciliado</text>
+<text x="93" y="527">INV02</text><text x="275" y="527">80.00</text><text x="406" y="527">50.00</text><text x="546" y="527" fill="#9c6a2f">Parcial</text>
+<text x="93" y="570">INV03</text><text x="275" y="570">60.00</text><text x="406" y="570">0.00</text><text x="546" y="570" fill="#9c6a2f">Sin pagar</text></g>
+<rect x="768" y="414" width="360" height="187" rx="12" fill="#f1f6f0" stroke="#dce5de"/>
+<text x="792" y="444" font-size="15" fill="#526f60" font-weight="bold">RESUMEN EXCEL</text>
+<text x="792" y="484" font-size="17" fill="#273e34">Laboratorio</text><text x="1103" y="484" font-size="17" fill="#273e34" text-anchor="end">215.20</text>
+<text x="792" y="517" font-size="17" fill="#273e34">Operaciones</text><text x="1103" y="517" font-size="17" fill="#273e34" text-anchor="end">76.50</text>
+<path d="M790 532 L1105 532" stroke="#bad0be" stroke-width="2"/>
+<text x="792" y="571" font-size="19" fill="#205d40" font-weight="bold">TOTAL</text><text x="1103" y="571" font-size="24" fill="#205d40" text-anchor="end" font-weight="bold">291.70</text>
+<text x="74" y="632" font-size="14" fill="#6a756c">Resultados deterministas de un ejemplo sintético · No representa un trabajo encargado por un cliente.</text>
+</g></svg>
