@@ -1,9 +1,0 @@
-record_id,date,amount,category
-A001,2026-09-01,125.00,Laboratory
-A002,2026-09-03,76.50,Operations
-A002,2026-09-03,76.50,Operations
-A003,2026-09-05,abc,Laboratory
-A004,2026-09-07,45.00,Operations
-A005,not-a-date,12.00,Laboratory
-A006,2026-09-08,90.20,Laboratory
-A007,2026-09-09,-4.00,Operations
