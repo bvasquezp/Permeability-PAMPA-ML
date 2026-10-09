@@ -1,34 +1,59 @@
-# Portfolio | Python Data Automation & Scientific Computing
+# Python Data Automation · Freelance portfolio
 
-Commercial demonstrations with **synthetic data**. These demos are separate from the scientific validation of the PAMPA-QSAR research in the repository root.
+![Resultado visual de datos sintéticos](assets/resultado_demo.svg)
 
-## What I can deliver
+**Clean data, reconcile records and deliver repeatable Excel reports.**
 
-| Client problem | Demonstration / deliverable | Status |
+**[Ver el caso en español (Workana)](CASE_STUDY_ES.md)** · **[English case study (Upwork)](CASE_STUDY_EN.md)**
+
+> **Evaluación rápida (2 minutos):** abre el caso en tu idioma, revisa el antes/después y los entregables, y mira el código/las pruebas. Los datos de demostración son sintéticos y **no representan trabajo contratado**.
+
+## Problemas que resuelve esta demostración
+
+| Problema habitual | Ejemplo implementado | Evidencia |
 | --- | --- | --- |
-| Messy CSV exports, duplicate records, invalid values | Clean CSV, rejection log, data-quality summary | Runnable demo below |
-| Manual reconciliation of invoices and payments | Exact invoice-ID matching; unpaid/partial/overpaid status and unmatched IDs | Runnable demo below |
-| Recurring reports | Formatted Excel summary with category subtotals | Runnable demo below |
-| Spreadsheet/PDF report automation | Client-specific template extraction/generation | Proposed, scoped separately |
-| SQL/API data pipelines and dashboards | Dataset integration, automated refresh, validation | Proposed, not included in demo |
-| Scientific data curation, RDKit/QSAR | Traceable datasets, descriptors, validation and reproducible analysis | See [PAMPA-ML research](../README.md) |
+| CSV con duplicados, montos o fechas inválidas | 6 registros → 3 válidos + 3 rechazados con razón | `demo.py`, `rejected_records.csv` |
+| Conciliación manual de pagos y facturas | Coincidencias exactas, pagos parciales y casos sin asignación | `reconciliation.csv` |
+| Reportes periódicos | Resumen Excel por categoría | `summary.xlsx` |
+| Necesidad de trazabilidad | Informe JSON y tests automatizados | `quality_summary.json`, `test_demo.py` |
 
-### Run locally
+### Ejecutar la demostración
 
-From the repository root, with Python 3.10+:
+Requiere Python 3.10 o posterior. Desde la raíz del repositorio:
 
 ```bash
+python -m pip install -r portfolio/requirements.txt
 python portfolio/demo.py --output portfolio/output
-python -m unittest discover -s portfolio -p 'test_*.py' -v
+python -m unittest discover -s portfolio -p "test_*.py" -v
 ```
 
-The Excel export requires `openpyxl` (`pip install openpyxl`). The demo uses no private data, external APIs, finance credentials, or AtomForge technology. The generated output folder is local; do not commit real client records.
+Después de ejecutar, abre `portfolio/output/summary.xlsx` y examina los cuatro archivos CSV/JSON de la misma carpeta. **El código de muestra utiliza datos ficticios integrados**, no lee automáticamente CSV arbitrarios ni conecta cuentas.
 
-### Scope limitations
+### Servicio comercial
 
-- Matching is exact on explicit invoice IDs; ambiguous records are for human review.
-- This is a synthetic workflow example, **not** production accounting or financial software.
-- No scraping, OCR, SQL, API connector, automated Power BI report, or document-generation feature is implemented in this example. These would need separately scoped engineering work.
-- No published model's predictive performance should be inferred from the synthetic data.
+- **Paquete de referencia: US$180–350** por una automatización pequeña y definida (cotización según datos).
+- Incluye limpieza/validación, registro de excepciones, reporte y documentación.
+- Para un proyecto real se adaptan esquemas, validaciones y fuentes a los ejemplos anonimizados del cliente.
 
-See [services and market positioning](MARKET_FIT.md).
+[Alcance y precio en español](CASE_STUDY_ES.md#oferta-comercial-de-referencia) · [Scope in English](CASE_STUDY_EN.md#example-scope-and-indicative-price)
+
+### Otras necesidades que puedo abordar (por cotización)
+
+- Ingesta desde Excel, CSV o APIs; ETL y validación de datos.
+- Extracción y generación de documentos PDF/Word (OCR solo si se acuerda).
+- Dashboards y reportes recurrentes.
+- Curación científica de datasets y quimioinformática con RDKit.
+
+**Estas cuatro extensiones no están implementadas en esta demostración.** No se confunden con características existentes.
+
+### Evidencia de especialización
+
+El [proyecto principal PAMPA/QSAR](../README.md) demuestra experiencia con pipelines científicos, trazabilidad, validación de modelos y análisis químico. El portfolio comercial y el proyecto científico tienen objetivos diferentes.
+
+### Privacidad y límites
+
+- No se incluyen datos de clientes, credenciales ni información privada de AtomForge.
+- No se infieren pagos no identificados ni se promete contabilidad sin intervención humana.
+- En proyectos reales deben definirse condiciones de aceptación, confidencialidad y derechos de uso antes de compartir datos.
+
+[Estudio de necesidades y segmentación](MARKET_FIT.md).
